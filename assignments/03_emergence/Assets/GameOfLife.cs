@@ -7,18 +7,22 @@ public class GameOfLife : MonoBehaviour
     public GameObject cellPrefab;
     CellScript[,] cells;
 
+    float timer = 2f;
+    bool[,] tempCellMatrix;
+
     void Start()
     {
         GenerateCells();
-        // Game();
     }
     
     void GenerateCells(){
          cells = new CellScript[20,20];
+         tempCellMatrix = new bool[20,20];
         for (int x = 0; x < 20; x++)
         {
             for (int y = 0; y < 20; y++)
-            {
+            {   
+                tempCellMatrix[x,y] = false;
                 // Create a position based on x, y
                 Vector3 pos = transform.position;
                 float cellWidth = 1f;
@@ -43,7 +47,13 @@ public class GameOfLife : MonoBehaviour
 
     void Update()
     {
-        Game();
+        timer -= Time.deltaTime;
+        if (timer < 0){
+            timer = 2f;
+          //  Debug.Log("Did it");
+            Game2();
+        }
+        // Game2();s
     }
 
 
@@ -73,11 +83,63 @@ public class GameOfLife : MonoBehaviour
     }
 
     void Game2(){
+         for (int l = 0; l<20;l++){
+            for(int m = 0; m < 20; m++){
+                int aliveNeighbors = 0;
+                
+                for(int i = -1; i<=1; i++){
+                    for (int j = -1; j <= 1; j++){
+                        // Debug.Log("|---|around cell: ("+  i+", "+ j +")  looking at (" +(l + i) + ", " +( m+j)+")");
+                        
+                        if(i + l >= 0 && i + l <= 19 && j + m >= 0 && j + m <= 19){
+                            if (cells[l + i, m + j].alive == true){
+                                // Debug.Log((i+l)+", "+ (j+m) + " is alive");
+                                aliveNeighbors += 1;
+                            }
+                        }
+                    }
+                }
+                if (cells[l,m].alive){
+                    aliveNeighbors -= 2;
+                }
+               // Debug.Log("x" + l +" y " + m +" is touching " + aliveNeighbors + " cells");
+
+                if(cells[l,m].alive && (aliveNeighbors < 2)){
+                    tempCellMatrix[l,m] = false;
+                    // cells[l,m].alive = false;
+                }
+                else if (cells[l,m].alive && (aliveNeighbors > 3)){
+                    tempCellMatrix[l,m] = false;
+                    // cells[l,m].alive = false;
+                }
+                else if ((cells[l,m].GetComponent<CellScript>().alive == false) && (aliveNeighbors == 3)){
+                    tempCellMatrix[l,m] = false;
+                    // cells[l,m].alive = true;
+                }
+                else{
+                    tempCellMatrix[l,m] = cells[l,m];
+                }
+
+            }
+         }
+
+         for (int i = 0; i < 20; i ++){
+            for(int j =0; j < 20; j++){
+                if (tempCellMatrix[i,j]){
+                    cells[i,j].alive = true;
+                }
+                else{
+                    cells[i,j].alive = false;
+                }
+            }
+         }
+
+
          
-
-
     }
+    // private int numAliveNeighbors(){
 
+    // }
 
     // bool isNeighbor(x,y){
     //     if(cell[x,y])
