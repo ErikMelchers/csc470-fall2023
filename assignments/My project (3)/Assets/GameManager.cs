@@ -69,7 +69,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("wow");
             if (!ended)
             {
-                gameOverText.enabled = true;
                 ended = true;
             }
         }
