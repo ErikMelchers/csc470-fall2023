@@ -15,7 +15,7 @@ Audio-wise there will be falling wind like noises and a song playing while falli
 
 # Interface Sketches
 
-![alt text](https://github.com/erikmelchers/csc470-fall2023/tree/main/assignments/final/Interface_Sketch)
+![Interface Sketches](https://github.com/ErikMelchers/csc470-fall2023/blob/main/assignments/final/Interface_Sketch.jpg)
 
 
 
