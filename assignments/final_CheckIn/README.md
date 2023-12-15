@@ -28,7 +28,7 @@ High Bar: All of the above and more enemy types, more power-ups like a new weapo
 
 # Timeline
 
-12/2: work on web design Final
+12/2: work on web design Final 
 12/3: finish web design Final
 12/4: Work on Software engineering final
 12/5: Finish Software engineering final (Due)
