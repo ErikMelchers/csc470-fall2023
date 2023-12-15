@@ -14,16 +14,26 @@ Very Easy huh?
 # You and Your Enemies
 
 You-
+
 ![image](https://github.com/ErikMelchers/csc470-fall2023/assets/78004427/5144dd21-b58b-470c-89cd-37df51a595e6)
+
 This is you falling, thriving, vibing.
 
 What you have to avoid
+
 ![image](https://github.com/ErikMelchers/csc470-fall2023/assets/78004427/addd4bf4-54f1-4f1b-bc35-e685bc9a776b)
+
 Slamming into Boulder while falling is bound to hurt
 
 Even more annoying guys to keep track of!
+
 ![image](https://github.com/ErikMelchers/csc470-fall2023/assets/78004427/7a878a8d-a751-45a2-a9de-e8e8df86162d)
+
 You might think that the sides of hole are safest from boulders, but these furious avians come out of their holes to find you there
 
 
+# Acknowladgements
+Song being played is 'They might as well be dead' from 'risk of rain 2' by Chris Christodoulou. YouTube Link: https://www.youtube.com/watch?v=VTJcLE_VVX8
+
+To Professor Treanor: Thank you very much for this year, it was very interesting and fun.
 
